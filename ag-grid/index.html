@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Grid - 100x100</title>
+    <script src="node_modules/ag-grid-community/dist/ag-grid-community.min.js"></script>
+</head>
+<body>
+    <div id="myGrid" style="height: 100vh; width: 100%;" class="ag-theme-quartz"></div>
+
+    <script>
+        // Generate 100 column definitions
+        const columnDefs = [];
+        for (let c = 1; c <= 100; c++) {
+            columnDefs.push({
+                headerName: `Col ${c}`,
+                field: `col${c}`,
+                width: 120,
+                editable: true,
+            });
+        }
+
+        // Generate 100 rows of data
+        const rowData = [];
+        for (let r = 1; r <= 100; r++) {
+            const row = {};
+            for (let c = 1; c <= 100; c++) {
+                row[`col${c}`] = `R${r}C${c}`;
+            }
+            rowData.push(row);
+        }
+
+        const gridOptions = {
+            columnDefs,
+            rowData,
+            defaultColDef: {
+                sortable: true,
+                filter: true,
+                resizable: true,
+            },
+        };
+
+        const myGridElement = document.querySelector('#myGrid');
+        agGrid.createGrid(myGridElement, gridOptions);
+    </script>
+</body>
+</html>
