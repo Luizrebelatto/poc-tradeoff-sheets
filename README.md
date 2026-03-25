@@ -1,6 +1,7 @@
 ## Bundle Size
-- FortuneSheet: 1971.32 kB
-- Ag-grid: 545 KB 
+- FortuneSheet: 247 KB
+- Ag-grid: 545 KB
+- x-spreadsheet: 150 KB
 
 
 ## ScreenShots
@@ -11,3 +12,7 @@
 #### Ag Grid
 
 <img width="1624" height="998" alt="agGrid" src="https://github.com/user-attachments/assets/66f60b15-41eb-4100-9732-72c2352ec15d" />
+
+#### XSpreadsheet
+
+<img width="1624" height="998" alt="xspreadsheet" src="https://github.com/user-attachments/assets/256a6ee6-64a4-449e-9667-eb2d9085be8f" />
